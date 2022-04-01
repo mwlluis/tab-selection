@@ -8,17 +8,16 @@ about.addEventListener('click', (e) => {
       btns.forEach(btn => {
         // clears active class from all buttons
         btn.classList.remove('active')
-        e.target.classList.add('active') // needs to have e because you are accessing the e object
-
+        // needs to have e because you are accessing the e object
+        e.target.classList.add('active') 
+        // selects the articles with text content and makes the selection text visible
         articles.forEach(article => {
           article.classList.remove('active')
-          if (article.id === id) {
-            article.classList.add('active')
-          }
+          const element = document.getElementById(id)
+            element.classList.add('active')
+          
         })
       })
-
-
-      
+  
     } // close if statement
 }) // close event listener
